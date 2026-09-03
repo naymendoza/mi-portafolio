@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Especifica que el documento cumple con la versión estándar HTML5 -->
+<html lang="es">
+    <head>
+        <!-- Define la codificación UTF-8 para mostrar correctamente acentos y la Ñ -->
+        <meta charset="UTF-8">
+        <!-- Configura la escala de visualización responsiva para pantallas móviles y laptops -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Título descriptivo que se muestra en la pestaña superior del navegador -->
+        <title>Mi Portafolio - Desarrollador Web Junior</title>
+        <!-- Vincula la hoja de estilos externa style.css para dar formato visual -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="body-portafolio">
+
+        <!-- SECCIÓN HERO: Presentación principal, perfil profesional y botones de contacto -->
+        <header class="seccion-hero">
+            <div class="contenido-hero">
+                <!-- Nombre del desarrollador como título principal de la página -->
+                <h1 class="nombre-hero">Nayeli Michelle</h1>
+                <!-- Título del puesto ajustado a un perfil de entrada / Trainee -->
+                <p class="rol-hero">Desarrollador Web Trainee / Junior | Backend
+                    PHP</p>
+                <!-- Extracto profesional honesto, enfocado en tus ganas de aprender y aportar -->
+                <p class="extracto-bio">
+                    Entusiasta de la programación con enfoque principal en el
+                    <strong>desarrollo backend</strong>.
+                    Cuento con conocimientos fundamentales en
+                    <strong>PHP, MySQL, HTML5 y CSS3</strong>
+                    aplicados en la creación de aplicaciones web estructuradas y
+                    sistemas CRUD. Mi objetivo principal es integrarme a un
+                    equipo de trabajo donde pueda <strong>aprender buenas
+                        prácticas, recibir mentoría y dar lo mejor de
+                        mí</strong> día a día para contribuir activamente a los
+                    proyectos de la empresa.
+                </p>
+                <!-- Contenedor flex para agrupar los botones de llamada a la acción -->
+                <div class="contenedor-acciones">
+                    <!-- Enlace tipo botón para descargar el currículum vitae en formato PDF -->
+                    <a href="CV-NMMP.pdf" download="CV-NMMP.pdf"
+                        class="btn-accion btn-cv">📄 Descargar CV</a>
+                    <!-- Enlace directo para iniciar un chat inmediato por WhatsApp -->
+                    <a href="https://wa.me/529513421087" target="_blank"
+                        class="btn-accion btn-ws">💬 WhatsApp Directo</a>
+                    <!-- Enlace directo para abrir la app de correo predeterminada -->
+                    <a href="mailto:mendozanayeli2401@gmail.com"
+                        class="btn-accion btn-mail">📧 Enviar Correo</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECCIÓN DE PROYECTOS: Contenedor general que alberga las tarjetas de cada sistema -->
+        <main class="contenedor-proyectos">
+
+            <!-- Encabezado de la sección de portafolio de proyectos -->
+            <h2 class="titulo-seccion">Proyectos Realizados</h2>
+
+            <!-- Rejilla o lista contenedora de las tarjetas de proyectos -->
+            <div class="grid-proyectos">
+
+                <!-- TARJETA 1: Sistema de Inventario CRUD -->
+                <article class="tarjeta-proyecto">
+
+                    <!-- Encabezado de la tarjeta con el título del proyecto y su estado -->
+                    <div class="header-tarjeta">
+                        <!-- Título principal del proyecto de inventario -->
+                        <h3 class="titulo-proyecto">Sistema de Gestión de
+                            Inventario (CRUD)</h3>
+                        <!-- Etiqueta distintiva verde indicando que el proyecto está completado -->
+                        <span class="badge-estado">Proyecto Funcional</span>
+                    </div>
+
+                    <!-- Galería visual con capturas de pantalla adaptadas -->
+                    <div class="galeria-imagenes">
+                        <!-- Caja contenedora para la captura en versión escritorio -->
+                        <div class="caja-imagen">
+                            <!-- Texto descriptivo sobre la imagen de escritorio -->
+                            <span class="etiqueta-vista">🖥️ Vista
+                                Escritorio</span>
+                            <!-- Imagen de la interfaz en computadora -->
+                            <img src="img/inventario-desktop.JPG"
+                                alt="Vista del sistema en escritorio"
+                                class="img-proyecto">
+                        </div>
+                        <!-- Caja contenedora para la captura en versión móvil -->
+                        <div class="caja-imagen">
+                            <!-- Texto descriptivo sobre la imagen de móvil -->
+                            <span class="etiqueta-vista">📱 Vista Móvil</span>
+                            <!-- Imagen de la interfaz adaptada a celular -->
+                            <img src="img/inventario-movil.png"
+                                alt="Vista del sistema en celular"
+                                class="img-proyecto">
+                        </div>
+                    </div>
+
+                    <!-- Descripción detallada de los requerimientos y funciones del sistema -->
+                    <p class="descripcion-proyecto">
+                        Aplicación web interactiva para administrar inventarios
+                        en tiempo real. Permite registrar, consultar, modificar
+                        y eliminar productos con almacenamiento persistente en
+                        MySQL, incluyendo motor de búsqueda integrado y
+                        validaciones dinámicas.
+                    </p>
+
+                    <!-- Sección de tecnologías utilizadas representadas como píldoras de color -->
+                    <div class="tecnologias">
+                        <!-- Etiqueta de PHP con su color distintivo -->
+                        <span class="tag tag-php">PHP</span>
+                        <!-- Etiqueta de MySQL con su color distintivo -->
+                        <span class="tag tag-mysql">MySQL</span>
+                        <!-- Etiqueta de HTML5 con su color distintivo -->
+                        <span class="tag tag-html">HTML5</span>
+                        <!-- Etiqueta de CSS3 con su color distintivo -->
+                        <span class="tag tag-css">CSS3</span>
+                        <!-- Etiqueta de JavaScript con su color distintivo -->
+                        <span class="tag tag-js">JavaScript</span>
+                    </div>
+
+                    <!-- Lista viñeteada con los logros técnicos y seguridad implementada -->
+                    <ul class="lista-logros">
+                        <!-- Logro de seguridad backend con sentencias preparadas -->
+                        <li><strong>Seguridad Backend:</strong> Consultas
+                            preparadas (`bind_param`) para prevenir inyecciones
+                            SQL en la base de datos.</li>
+                        <!-- Logro de validaciones en el cliente -->
+                        <li><strong>Validación Frontend:</strong> Restricción de
+                            caracteres especiales, números negativos y límites
+                            de texto en tiempo real.</li>
+                        <!-- Logro de diseño responsivo -->
+                        <li><strong>Maquetación Responsiva:</strong>
+                            Adaptabilidad total para móviles y computadoras
+                            usando Flexbox y Media Queries.</li>
+                    </ul>
+                    <!-- Enlace final con tu repositorio de GitHub -->
+                    <a href="https://github.com/naymendoza/proyecto-inventario"
+                        target="_blank" class="btn-accion btn-github">
+                        💻 Ver Código Fuente
+                    </a>
+                </article>
+            </div>
+
+        </main>
+
+    </body>
+</html>

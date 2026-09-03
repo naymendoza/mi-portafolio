@@ -1,0 +1,295 @@
+/* ==========================================================================
+   1. ESTILOS GENERALES Y CONFIGURACIÓN DE PÁGINA
+   ========================================================================== */
+
+/* Define estilos globales para el cuerpo completo del portafolio */
+.body-portafolio {
+    background-color: #f1f5f9;       /* Fondo gris claro suave para hacer resaltar las tarjetas */
+    margin: 0;                       /* Elimina los márgenes predeterminados del navegador */
+    padding: 0;                      /* Elimina los rellenos predeterminados */
+    font-family: Arial, sans-serif;  /* Tipografía limpia y fácil de leer */
+    color: #1e293b;                  /* Color de texto principal gris muy oscuro */
+}
+
+/* ==========================================================================
+   2. ESTILOS DE LA SECCIÓN HERO (PRESENTACIÓN)
+   ========================================================================== */
+
+/* Fondo azul noche con degradado para la parte superior del portafolio */
+.seccion-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Degradado moderno de azul oscuro */
+    color: #ffffff;                  /* Texto blanco de alto contraste */
+    padding: 50px 20px;              /* Espaciado interno superior, inferior y lateral */
+    text-align: center;              /* Centra todo el texto y botones dentro del banner */
+    border-bottom: 4px solid #3b82f6;/* Línea inferior azul brillante que sirve de acento visual */
+}
+
+/* Limitador de ancho para que el texto de presentación sea cómodo de leer */
+.contenido-hero {
+    max-width: 800px;                /* Define un ancho máximo de 800 píxeles */
+    margin: 0 auto;                  /* Centra el contenedor horizontalmente en la pantalla */
+}
+
+/* Nombre del desarrollador con tamaño grande de alto impacto */
+.nombre-hero {
+    font-size: 36px;                 /* Tamaños grande para que sea lo primero que se vea */
+    margin: 0;                       /* Quita el margen superior e inferior por defecto */
+    font-weight: bold;               /* Texto en negrita para dar firmeza */
+}
+
+/* Subtítulo con el rol o puesto aspirado */
+.rol-hero {
+    font-size: 18px;                 /* Tamaño mediano destacado */
+    color: #38bdf8;                  /* Color azul celeste para contrastar con el fondo oscuro */
+    margin-top: 8px;                 /* Separación respecto al nombre */
+    margin-bottom: 15px;             /* Separación respecto al extracto bio */
+}
+
+/* Párrafo descriptivo sobre la experiencia y aspiraciones del desarrollador */
+.extracto-bio {
+    font-size: 15px;                 /* Tamaño adecuado para lectura fluida */
+    line-height: 1.6;                /* Altura de línea para evitar que el texto se vea apretado */
+    color: #cbd5e1;                  /* Gris claro brillante para lectura cómoda */
+    margin-bottom: 25px;             /* Separación con los botones de contacto */
+}
+
+/* Contenedor flex para alinear los botones de acción */
+.contenedor-acciones {
+    display: flex;                   /* Utiliza modelo de caja flexible */
+    justify-content: center;        /* Centra los botones en el medio del contenedor */
+    gap: 12px;                       /* Genera una separación de 12px entre cada botón */
+    flex-wrap: wrap;                /* Permite que los botones se acomoden abajo si la pantalla es chica */
+}
+
+/* Estilo base tipo botón compartido para todas las acciones */
+.btn-accion {
+    padding: 10px 20px;              /* Relleno vertical y horizontal para crear área clickeable */
+    border-radius: 8px;              /* Esquinas redondeadas suaves */
+    font-size: 14px;                 /* Tamaño de letra para botones */
+    font-weight: bold;               /* Texto en negrita para resaltar */
+    text-decoration: none;           /* Quita el subrayado predeterminado de los enlaces */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animación suave al pasar el cursor */
+}
+
+/* Efecto hover al pasar el ratón por encima del botón */
+.btn-accion:hover {
+    transform: translateY(-2px);    /* Eleva ligeramente el botón 2 píxeles hacia arriba */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Crea una sombra proyectada al flotar */
+}
+
+/* Colores específicos según el tipo de botón */
+.btn-cv { background-color: #2563eb; color: #ffffff; }     /* Azul institucional para el CV */
+.btn-ws { background-color: #16a34a; color: #ffffff; }     /* Verde WhatsApp */
+.btn-mail { background-color: #475569; color: #ffffff; }   /* Gris oscuro para correo */
+
+/* ==========================================================================
+   3. ESTILOS DE LA SECCIÓN DE PROYECTOS Y TARJETAS (CARDS)
+   ========================================================================== */
+
+/* Contenedor principal que centra la sección de proyectos */
+.contenedor-proyectos {
+    max-width: 950px;                /* Ancho máximo para mantener buena proporción visual */
+    margin: 0 auto;                  /* Centra el bloque en el medio de la pantalla */
+    padding: 40px 20px;              /* Espaciado interno alrededor del contenido */
+}
+
+/* Título de la sección "Proyectos Realizados" */
+.titulo-seccion {
+    text-align: center;              /* Centra el título de la sección */
+    font-size: 28px;                 /* Tamaño grande para destacar la división */
+    color: #0f172a;                  /* Color azul muy oscuro */
+    margin-top: 0;                   /* Quita margen superior sobrante */
+    margin-bottom: 30px;             /* Espacio de 30px antes de la primera tarjeta */
+}
+
+/* Estructura en columna para ordenar las tarjetas de proyectos */
+.grid-proyectos {
+    display: flex;                   /* Usa Flexbox para ordenar los elementos */
+    flex-direction: column;         /* Alinea las tarjetas una debajo de otra */
+    gap: 30px;                       /* Espacio de 30px entre cada tarjeta si agregas más en el futuro */
+}
+
+/* Diseña cada tarjeta (Card) contenedora de un proyecto */
+.tarjeta-proyecto {
+    background-color: #ffffff;       /* Fondo blanco puro para hacer resaltar la información */
+    border-radius: 12px;             /* Esquinas redondeadas modernas */
+    padding: 28px;                   /* Relleno interno en todos los bordes de la tarjeta */
+    border: 1px solid #e2e8f0;      /* Borde gris sutil para definir los límites */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); /* Sombra elegante proyectada hacia abajo */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transición para efecto flotante */
+}
+
+/* Efecto hover suave al poner el ratón sobre la tarjeta */
+.tarjeta-proyecto:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1); /* Sombra un poco más intensa al pasar el mouse */
+}
+
+/* Cabecera interna de la tarjeta de proyecto */
+.header-tarjeta {
+    display: flex;                   /* Alinea el título y la etiqueta verde en una sola línea */
+    justify-content: space-between; /* Empuja el título a la izquierda y el badge a la derecha */
+    align-items: center;            /* Centra ambos elementos verticalmente */
+    flex-wrap: wrap;                /* Si no caben, permite que la etiqueta baje */
+    gap: 10px;                       /* Espacio de seguridad entre título y badge */
+    margin-bottom: 20px;             /* Separación inferior con respecto a la galería */
+}
+
+/* Título del proyecto dentro de la tarjeta */
+.titulo-proyecto {
+    margin: 0;                       /* Elimina márgenes por defecto */
+    font-size: 22px;                 /* Tamaño de letra mediano destacado */
+    color: #0f172a;                  /* Azul noche muy oscuro */
+}
+
+/* Etiqueta distintiva tipo píldora verde para mostrar el estado del proyecto */
+.badge-estado {
+    background-color: #dcfce7;       /* Fondo verde menta claro */
+    color: #15803d;                  /* Texto verde oscuro para alto contraste */
+    padding: 5px 14px;               /* Relleno interno superior/inferior y lateral */
+    border-radius: 20px;             /* Redondeado total para forma de cápsula */
+    font-size: 12px;                 /* Letra pequeña */
+    font-weight: bold;               /* Texto resaltado en negrita */
+}
+
+/* Contenedor flex para colocar las imágenes lado a lado */
+.galeria-imagenes {
+    display: flex;                   /* Coloca las imágenes en fila horizontal */
+    gap: 20px;                       /* Espacio de 20px entre la vista de escritorio y móvil */
+    margin-bottom: 20px;             /* Separación con el texto de la descripción */
+    flex-wrap: wrap;                /* En celulares apila una foto sobre la otra */
+}
+
+/* Caja individual para cada captura de pantalla */
+.caja-imagen {
+    flex: 1;                         /* Permite que ambas cajas ocupen el mismo ancho disponible */
+    min-width: 270px;                /* Ancho mínimo antes de reacomodarse */
+}
+
+/* Etiqueta superior que indica qué tipo de vista es (Desktop/Mobile) */
+.etiqueta-vista {
+    display: block;                  /* Ocupa toda su propia línea */
+    font-size: 13px;                 /* Tamaño de letra pequeño */
+    font-weight: bold;               /* Texto en negrita */
+    color: #64748b;                  /* Gris medio elegante */
+    margin-bottom: 8px;              /* Separación de 8px con la imagen */
+    text-align: center;              /* Texto centrado arriba de la imagen */
+}
+
+/* Estilo y formateo de la imagen recortada simétricamente */
+.img-proyecto {
+    width: 100%;                     /* Ocupa el 100% del ancho de su caja contenedora */
+    height: 220px;                   /* Fija una altura uniforme para que ambas fotos midan igual */
+    object-fit: cover;               /* Recorta la imagen proporcionalmente sin deformar */
+    object-position: top;            /* Muestra la parte superior de la captura de pantalla */
+    border-radius: 8px;              /* Bordes redondeados en las esquinas de la imagen */
+    border: 1px solid #cbd5e1;      /* Borde gris sutil alrededor de la foto */
+}
+
+/* Texto de descripción funcional del sistema */
+.descripcion-proyecto {
+    color: #334155;                  /* Color gris oscuro legible */
+    line-height: 1.6;                /* Espaciado adecuado entre líneas de texto */
+    font-size: 15px;                 /* Tamaño de texto estándar */
+    margin-bottom: 20px;             /* Separación de 20px con las etiquetas de herramientas */
+}
+
+/* ==========================================================================
+   4. ETIQUETAS DE HERRAMIENTAS Y TECNOLOGÍAS (TAGS/CHIPS)
+   ========================================================================== */
+
+/* Contenedor flex para ordenar los badges de tecnologías */
+.tecnologias {
+    display: flex;                   /* Modelo flexible en fila */
+    gap: 8px;                        /* Espacio de 8px entre cada etiqueta de tecnología */
+    flex-wrap: wrap;                /* Si son muchas, pasa las sobrantes a la siguiente línea */
+    margin-bottom: 20px;             /* Separación de 20px con la lista de logros */
+}
+
+/* Estilo base tipo cápsula para cada etiqueta técnica */
+.tag {
+    padding: 6px 14px;              /* Relleno interno cómodo para crear la pastilla */
+    border-radius: 20px;             /* Redondeado total para aspecto de píldora moderna */
+    font-size: 12px;                 /* Tamaño pequeño de fuente */
+    font-weight: bold;               /* Texto resaltado */
+}
+
+/* Colores personalizados por cada tecnología utilizada */
+.tag-php { background-color: #e0e7ff; color: #3730a3; }    /* Violeta/Azul índigo para PHP */
+.tag-mysql { background-color: #fef3c7; color: #92400e; }  /* Amarillo cálido/Ámbar para MySQL */
+.tag-html { background-color: #ffedd5; color: #9a3412; }   /* Naranja suave para HTML5 */
+.tag-css { background-color: #dbeafe; color: #1e40af; }    /* Azul para CSS3 */
+.tag-js { background-color: #fef9c3; color: #854d0e; }     /* Amarillo brillante para JavaScript */
+
+/* ==========================================================================
+   5. LISTA DE LOGROS TÉCNICOS Y SEGURIDAD
+   ========================================================================== */
+
+/* Lista de puntos clave de seguridad y maquetación */
+.lista-logros {
+    margin: 0;                       /* Elimina márgenes exteriores */
+    padding-left: 20px;              /* Indentación a la izquierda para las viñetas */
+    color: #475569;                  /* Gris medio de buena lectura */
+    line-height: 1.7;                /* Espaciado generoso entre renglones */
+    font-size: 14px;                 /* Tamaño de fuente claro */
+}
+
+/* Resalta el texto en negrita dentro de los puntos de la lista */
+.lista-logros strong {
+    color: #0f172a;                  /* Azul muy oscuro para llamar la atención en palabras clave */
+}
+
+/* ==========================================================================
+   BOTON PARA GitHub 
+   ========================================================================== */
+
+/* Estilos específicos para personalizar el botón de GitHub dentro de la tarjeta */
+.btn-github {
+    background-color: #0f172a; /* Fondo azul noche oscuro propio de GitHub */
+    color: #ffffff;            /* Texto de color blanco para alto contraste */
+    display: inline-flex;      /* Alinea el icono y el texto de forma flexible */
+    align-items: center;       /* Centra verticalmente el icono con el texto */
+    gap: 8px;                  /* Distancia exacta entre el icono y el texto */
+    padding: 10px 18px;        /* Espaciado interno: 10px arriba/abajo y 18px a los lados */
+    border-radius: 8px;        /* Bordes suavemente redondeados */
+    margin-top: 22px;          /* Crea un espacio limpio separándolo de la lista superior */
+    text-decoration: none;    /* Quita el subrayado azul de enlace */
+    font-size: 14px;           /* Tamaño de fuente legible y proporcionado a la tarjeta */
+    font-weight: 600;          /* Grosor de texto semi-negrita para resaltar */
+    transition: background-color 0.3s ease; /* Hace suave el cambio de color al pasar el mouse */
+}
+
+/* Efecto visual al pasar el puntero sobre el botón */
+.btn-github:hover {
+    background-color: #1e293b; /* Cambia a un azul un poco más claro al pasar el cursor */
+}
+
+
+
+
+
+
+/* ==========================================================================
+   REGLAS RESPONSIVAS PARA PANTALLAS DE CELULAR (Móviles de hasta 600px)
+   ========================================================================== */
+
+/* @media aplica estos estilos únicamente si la pantalla es menor a 600px de ancho */
+@media (max-width: 600px) {
+    
+    /* Ajusta los encabezados y celdas de la tabla para celulares */
+    table th, table td {
+        font-size: 12px;             /* Reduce la letra a 12px para aprovechar mejor el espacio */
+        padding: 8px 4px;            /* Reduce el relleno interno dentro de cada celda */
+    }
+
+    /* Permite desplazamiento suave horizontal exclusivo para la tabla */
+    .contenedor-tabla {
+        overflow-x: auto;            /* Si la tabla no cabe, permite deslizarla sin deformar la pantalla */
+        width: 100%;                 /* Asegura que el contenedor ocupe todo el ancho del celular */
+    }
+
+    /* Ajusta el botón (+ Agregar Producto) para pantallas táctiles */
+    .btn-agregar {
+        width: 90%;                  /* Hace que el botón ocupe casi todo el ancho del celular */
+        margin: 10px auto;           /* Centra el botón horizontalmente con espacio arriba y abajo */
+    }
+}
